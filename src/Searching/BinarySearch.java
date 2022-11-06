@@ -13,7 +13,6 @@ if not search in left array continue it until it find the key
 if the key is not found the return -1;
 
 Time Complexity: O(LogN)
-
  */
 public class BinarySearch {     //Space Complexity: O(1)
     public int Search(int[] arr,int l,int h,int key){
