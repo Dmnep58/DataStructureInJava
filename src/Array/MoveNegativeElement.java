@@ -28,7 +28,7 @@ public class MoveNegativeElement {
                 k++;
             }
         }
-        int arrlen=0;
+        int arrlen = 0;
         for(int i=0;i<pos.length;i++){
             arr[arrlen]=pos[i];
             arrlen++;
