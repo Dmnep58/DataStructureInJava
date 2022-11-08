@@ -1,6 +1,5 @@
 package DataStructureImplementation;
 
-import java.util.Locale;
 
 /*  Strings....
 string are immutable in nature which means it cannot be modified once it is created
@@ -34,7 +33,7 @@ public class Strings {
     public static void main(String[] args) {
         String s= "Devi Prasad Mishra";
 
-        String d = new String("ram");
+        String d = new String("devi");
 
         System.out.println(s);
         System.out.println(d);
@@ -53,7 +52,7 @@ public class Strings {
 
         System.out.println();
 
-        //check whether  the strings are equal or not
+        //check whether the strings are equal or not
         if(s.equalsIgnoreCase(d)){
             System.out.println("Both have Same content");
         }
