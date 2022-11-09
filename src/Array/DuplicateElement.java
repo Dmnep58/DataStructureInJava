@@ -7,8 +7,9 @@ occurring more than once in the given array.
 
 
 Approach:
+Sort the array using any sort method then
 Run a loop from o to n-1
-compare 1st node with each and every node
+compare 1st node with its neighbour node
 if Duplicate found then return 1
 if note move it ahead by 1 and continue to check again.
 Repeat it till the size is max.
