@@ -7,6 +7,9 @@ Approach:
 divide the array into two sub arrays continue it till its nodes became single
 join the array in the sorted order
 
+
+Time Complexity: O(nlogN)
+Space complexity: O(n)
  */
 
 public class MergeSort {
