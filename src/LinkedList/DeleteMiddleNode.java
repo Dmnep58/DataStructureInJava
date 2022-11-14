@@ -1,5 +1,6 @@
 package LinkedList;
 
+
 /*
                             Delete the middle element of the linked list
 Approach:
