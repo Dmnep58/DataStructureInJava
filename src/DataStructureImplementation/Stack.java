@@ -24,7 +24,7 @@ Advantages:
 
 Disadvantages
 1. Stack memory is very limited.
-2. The stack will fall outside of the memory area, which might lead to an abnormal termination.
+2. The stack will fall outside the memory area, which might lead to an abnormal termination.
 3. In a stack, random accessing the data is not possible.
 
  */
