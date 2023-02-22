@@ -6,7 +6,7 @@ Selection Sort is a sorting technique in which begining element is swaped with t
 Approach:
 1. Iterate from 0 to n-1
 2. Find the minimum element from the unsorted array.
-3. swap the minimum element with the begining element.
+3. swap the minimum element with the beginning element.
 4. Repeat the process until the array is sorted or reaches its final length.
 
 Time Complexity = O(n^2)

@@ -81,7 +81,7 @@ class CircularLinkedList {
             System.out.print(current.data + "-->");
             current = current.next;
         }
-        System.out.println(current.data + "-->reference to last node");
+        System.out.println(current.data + "-->reference to last node-->"+current.next.data);
     }
 
     // to delete node from the head node.
