@@ -88,6 +88,19 @@ public class CircularLinkedlist {
         temp.next = current;
     }
 
+    //delete the element from the beginning of the list
+    public void deletebe(){
+
+        if(head == null){
+            System.out.println("trying to delete element from the empty linked list");
+        }
+
+        listnode current  = head;
+        current = current.next;
+        head = current;
+        tail.next= head;
+    }
+
 
     // to display the data present in the linked list
     public void display(){
@@ -117,6 +130,7 @@ public class CircularLinkedlist {
             System.out.println("1.insertion at beginning");
             System.out.println("2.insertion at end");
             System.out.println("3. insertion at specific position");
+            System.out.println("4. Deletion at beginning");
             System.out.println("4.display");
             System.out.println("5.exit");
             System.out.print("Enter your choice: ");
@@ -133,9 +147,12 @@ public class CircularLinkedlist {
                     circularLinkedlist.InsertAtAnyPosition();
                     break;
                 case 4:
-                    circularLinkedlist.display();
+                    circularLinkedlist.deletebe();
                     break;
                 case 5:
+                    circularLinkedlist.display();
+                    break;
+                case 6:
                     System.exit(0);
                     break;
                 default:
