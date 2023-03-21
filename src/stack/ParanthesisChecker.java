@@ -2,8 +2,6 @@ package stack;
 
 
 //the main goal of this program is to check the brackets are assigned properly or not
-
-
 // for example [x+y{z/(g-t)}] is this expression is correct or not.
 
 import java.util.Scanner;
