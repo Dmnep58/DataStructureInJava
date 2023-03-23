@@ -6,7 +6,7 @@ package stack;
 
 import java.util.Scanner;
 
-public class ParanthesisChecker {
+public class ParenthesisChecker {
     public static void main(String[] args) {
 
         String s;
@@ -22,15 +22,14 @@ public class ParanthesisChecker {
 
         for (int i=0;i<s.length();i++){
 
+            //push the parenthesis in the stack
             if(s.charAt(i)=='[' || s.charAt(i)=='{' ||s.charAt(i)=='('){
                 top++;
                 ch[top]=s.charAt(i);
-                System.out.println("pushed");
             }
-
+            //pop the corresponding brackets
              if((s.charAt(i)==']' && ch[top]=='[') || (s.charAt(i)=='}' && ch[top]=='{') || (s.charAt(i)=='}'  &&  ch[top]=='(')){
                 top--;
-                System.out.println("poped");
             }
 
         }
