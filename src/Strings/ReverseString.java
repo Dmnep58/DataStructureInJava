@@ -1,10 +1,12 @@
 package Strings;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class ReverseString {
 
-    public void reverse(String s){
+    public void reverse(@NotNull String s){
         String ReverseString="";
         for (int i=s.length()-1; i>=0; i--){
             ReverseString += s.charAt(i);
@@ -12,6 +14,8 @@ public class ReverseString {
         }
         System.out.println(ReverseString);
     }
+
+
     public static void main(String[] args) {
         String s;
         Scanner sc = new Scanner(System.in);
