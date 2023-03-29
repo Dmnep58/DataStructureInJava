@@ -39,7 +39,7 @@ public class MergeSort {
         int i = 0, j = 0;
         int k = l;
 
-        //run the array bby checking their sizes and insert the values according to their value on the
+        //run the array by checking their sizes and insert the values according to their value on the
         // basis of the comparison showed below.
         while (i < index1 && j < index2) {
             if (A[i] <= B[j]) {

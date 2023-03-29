@@ -7,11 +7,11 @@ may on ascending or descending.
 Approach:
 Check the length of the array it must be greater than -1.
 
-run the loop from 1 to arr.length
-initialize the array key with the  index (starting with 2nd)
-Now check the second index and 1st index value using a loop repeatedly.
-if the value of 1st index is more than swap the index and more the index by one ie 1st ind to 2nd and 2nd to 3rd
-if not then move the 2nd ind to 3rd.
+1. run the loop from 1 to arr.length
+2. initialize the array key with the  index (starting with 2nd)
+3. Now check the second index and 1st index value using a loop repeatedly.
+4. if the value of 1st index is more than swap the index and more the index by one ie 1st  to 2nd and 2nd to 3rd
+5. if not then move the 2nd ind to 3rd.
 
 Time Complexity = O(N^2)
 Space Complexity = O(1)
