@@ -35,6 +35,7 @@ public class DuplicateElement {
             }
             arr[j+1]=key;
         }
+
           for(int k=0;k<size-1;k++){
               if(arr[k]==arr[k+1]){
                   return 1;
