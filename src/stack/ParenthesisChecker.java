@@ -4,41 +4,48 @@ package stack;
 //the main goal of this program is to check the brackets are assigned properly or not
 // for example [x+y{z/(g-t)}] is this expression is correct or not.
 
+import java.lang.reflect.Parameter;
 import java.util.Scanner;
 
 public class ParenthesisChecker {
-    public static void main(String[] args) {
 
-        String s;
-        Scanner sc = new Scanner(System.in) ;
-        System.out.print("enter the expression: ");
-        s = sc.next();
+    public boolean isValid(String s) {
+        char[] stack = new char[s.length()+1];
+        int top=0;
 
-        char[] ch= new char[s.length()+1];
-
-        int top=-1;
-
-        System.out.println(s.length());
-
-        for (int i=0;i<s.length();i++){
-
-            //push the parenthesis in the stack
-            if(s.charAt(i)=='[' || s.charAt(i)=='{' ||s.charAt(i)=='('){
-                top++;
-                ch[top]=s.charAt(i);
+        if(s.length()==1){
+            if(s.charAt(0)==']' || s.charAt(0)=='}' ||  s.charAt(0)==')'
+                    || s.charAt(0)=='[' || s.charAt(0)=='{' ||  s.charAt(0)=='('){
+                return false;
             }
-            //pop the corresponding brackets
-             if((s.charAt(i)==']' && ch[top]=='[') || (s.charAt(i)=='}' && ch[top]=='{') || (s.charAt(i)=='}'  &&  ch[top]=='(')){
+        }
+
+        for(int i=0;i<s.length();i++){
+            if(s.charAt(i)=='(' || s.charAt(i)=='{' ||  s.charAt(i)=='['){
+                top++;
+                stack[top]=s.charAt(i);
+            }
+            else { if((stack[top]=='(' && s.charAt(i)==')') || (stack[top]=='{' && s.charAt(i)=='}') ||
+                    (stack[top]=='[' && s.charAt(i)==']')){
                 top--;
             }
-
+            else{
+                return false;
+            }
+            }
         }
-        System.out.println(ch.length);
-        if(top==-1)
-            System.out.println("valid");
-        else
-            System.out.println("invalid");
-        sc.close();
 
+        if(top==0){
+            return true;
+        }
+
+        return false;
+    }
+    public static void main(String[] args) {
+        ParenthesisChecker pc = new ParenthesisChecker();
+        String s ;
+        Scanner sc = new Scanner(System.in);
+        s= sc.next();
+        System.out.println(pc.isValid(s));
     }
 }
