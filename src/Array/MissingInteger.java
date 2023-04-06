@@ -1,4 +1,8 @@
 package Array;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 /*
             Find the missing integer in the array starting from 0 but not sequential
 Approach:
@@ -24,11 +28,29 @@ public class MissingInteger {
         return total-number;
     }
 
+    //another way
+
+    public int Missingvalue(int[] arr){
+        Arrays.sort(arr);
+
+        int max=  arr[arr.length-1];
+        System.out.println(max);
+
+        for(int i =0;i<max ;i++){
+            if(arr[i]!=i){
+                return i;
+            }
+        }
+
+        return -1;
+    }
+
     public static void main(String[] args) {
         MissingInteger m = new MissingInteger();
 
         int[] arr = {1,3,2,4,6,8,5,9,10};
 
         System.out.println(m.MissingNumber(arr, arr.length));
+        System.out.println(m.Missingvalue(arr));
     }
 }

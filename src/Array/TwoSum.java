@@ -12,7 +12,6 @@ print  3 and 4
 public class TwoSum {
 
     public int[] indexes(int[] arr,int total){
-        int sum;
         int[] a = new int[2];
 
         for(int i =0;i<arr.length;i++) {

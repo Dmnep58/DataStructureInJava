@@ -20,16 +20,15 @@ public class BinarySearch {     //Space Complexity: O(1)
             return -1;
         }
 
-        while(l<h){
-            int mid = (l+h)/2;
+        while(l <= h){
+            int mid =l+ (h-l)/2;
 
             if(arr[mid]==key)
                 return mid;
 
             if(arr[mid]>key)
-                h=mid;
-
-            if(arr[mid]<key)
+                h=mid-1;
+            else
                 l=mid+1;
 
         }
@@ -42,17 +41,16 @@ public class BinarySearch {     //Space Complexity: O(1)
         if(l>h)
             return -1;
 
-        while(l<h){
-            int mid = (l+h)/2;
+        while(h>=l){
+            int mid =l+(h-l)/2;
 
             if(arr[mid]==key)
                 return mid;
 
             if(arr[mid]>key)
-                SearchRecursion(arr,l,mid,key);
+               return  SearchRecursion(arr,l,mid-1,key);
 
-            if(arr[mid]<key)
-                SearchRecursion(arr,mid+1,h,key);
+               return  SearchRecursion(arr,mid+1,h,key);
 
         }
         return h;
