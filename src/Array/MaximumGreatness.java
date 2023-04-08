@@ -10,9 +10,7 @@ package Array;
 public class MaximumGreatness{
     public int maxGreatness(int[] arr,int size){
         int[] b = new int[arr.length];
-        for(int i=0;i<arr.length;i++){
-            b[i]=arr[i];
-        }
+        System.arraycopy(arr, 0, b, 0, arr.length);
 
         int k;
         for(int i=1;i<size;i++){
@@ -39,11 +37,11 @@ public class MaximumGreatness{
                 count1++;
             }
         }
-        for(int n=0;n<arr.length;n++){
-            System.out.print(arr[n]+" ");
+        for (int i : arr) {
+            System.out.print(i + " ");
 
         }
-        System.out.printf("\n");
+        System.out.print("\n");
         for(int n=0;n<arr.length;n++){
             System.out.print(b[n]+" ");
         }

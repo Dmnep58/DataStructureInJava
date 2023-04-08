@@ -19,9 +19,8 @@ public class CyclicallyRotateArray {
           b[j++]=arr[i];
       }
 
-      for(int i=0;i<size;i++){
-          arr[i]=b[i];
-      }
+        System.arraycopy(b, 0, arr, 0, size);
+
         for(int i=0;i<size;i++){
             System.out.print(arr[i]);
         }

@@ -30,8 +30,8 @@ public class KthSmallestElement {
         int[] arr ={1,0,5,3,6,7,8,90,54,34,26,51};
 
         k.sort(arr,arr.length);
-        for(int i=0;i<arr.length;i++){
-            System.out.print(arr[i]+" ");
+        for (int j : arr) {
+            System.out.print(j + " ");
         }
         System.out.println();
 

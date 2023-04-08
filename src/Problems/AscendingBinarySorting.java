@@ -35,7 +35,7 @@ public class AscendingBinarySorting {
         }
 
 
-        System.out.println("Copy the reamaining element");
+        System.out.println("Copy the remaining element");
         for(int i=0;i<k-1;i++){
            if(c[i]>c[i+1]){
                int temp = c[i];
@@ -44,9 +44,9 @@ public class AscendingBinarySorting {
            }
         }
 
-        for(int i=0;i<arr.length;i++){
-            if(arr[i] != 0){
-                c[k++] = arr[i];
+        for (int j : arr) {
+            if (j != 0) {
+                c[k++] = j;
             }
         }
 
@@ -57,11 +57,10 @@ public class AscendingBinarySorting {
     }
 
     public static void main(String[] args) {
-        int[] a= {5,3,7,10,14};
+        int[] a= {112,234,6456,678,345,756};
 
-        AscendingBinarySorting as = new AscendingBinarySorting();
 
-        as.rearrange(a);
+        rearrange(a);
 
     }
 }
