@@ -50,19 +50,45 @@ public class SwapInPairs {
 
     }
 
+    public void swap(node n){
+        if(n==null || n.next==null){
+            System.out.println(n);
+        }
+        node current = n;
+
+        while(current != null && current.next!= null){
+            int temp = current.data;
+            current.data = current.next.data;
+            current.next.data=temp;
+
+            current=current.next.next;
+        }
+
+        node temp = n;
+        while (temp!=null){
+            System.out.println(temp.data);
+            temp= temp.next;
+        }
+
+
+    }
+
     public static void main(String[] args) {
         node head= new node(1);
         node first = new node(2);
         node second = new node(3);
         node third = new node(4);
+        node fourth = new node(5);
 
         head.next = first;
         first.next = second;
         second.next = third;
-        third.next = null;
+        third.next = fourth;
+
+        fourth.next=null;
 
         SwapInPairs sp = new SwapInPairs();
-         sp.SortPair(head);
+         sp.swap(head);
 
     }
 }

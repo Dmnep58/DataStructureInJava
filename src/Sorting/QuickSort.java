@@ -30,6 +30,10 @@ public class QuickSort {
             {
                 i++;
                 swap(arr,i,j);
+                for(int a : arr){
+                    System.out.print(a+" ");
+                }
+                System.out.println();
             }
         }
         swap(arr,i+1,h);
@@ -57,7 +61,7 @@ public class QuickSort {
     public static void main(String[] args) {
         QuickSort q = new QuickSort();
 
-        int[] arr= {1,21,32,43,54,65,76,87,89};
+        int[] arr= {10,80,30,90,40,50,70};
         q.Sort(arr,0, arr.length-1);
         q.display(arr,arr.length);
     }
