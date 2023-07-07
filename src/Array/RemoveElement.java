@@ -3,22 +3,21 @@ package Array;
 import java.util.Scanner;
 
 public class RemoveElement {
-    public int removeElement(int[] nums, int val) {
-        int count=0;
-        int a=0;
-        int[] b = new int[nums.length];
-        for(int i=0;i<nums.length;i++){
-            if(nums[i] != val){
-                b[i]=nums[i];
-                System.out.printf("%d ",b[i]);
-            }
-            else{
-                count++;
+    public int removeElement(int[] numbs, int val) {
+        int count = 0;
+
+        int[] b = new int[numbs.length];
+
+        for(int i=0; i<numbs.length; i++){
+            if(numbs[i] != val){
+                b[count]=numbs[i];
+                count ++;
             }
         }
 
         for(int i=0;i<b.length;i++){
-            nums[i]=b[i];
+            numbs[i]=b[i];
+            System.out.println(numbs[i]+" testing");
         }
 
         return count;
@@ -49,6 +48,8 @@ public class RemoveElement {
             System.out.print(a+" ");
         }
 
-        System.out.println("value occurance is: "+rm.removeElement(arr,val));
+        System.out.println("\nvalue occurance is: "+rm.removeElement(arr,val));
+
+        sc.close();
     }
 }
