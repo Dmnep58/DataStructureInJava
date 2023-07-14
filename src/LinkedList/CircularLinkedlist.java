@@ -1,6 +1,5 @@
 package LinkedList;
 
-import javax.sound.midi.Soundbank;
 import java.util.Scanner;
 
 public class CircularLinkedlist {
@@ -121,7 +120,6 @@ public class CircularLinkedlist {
             System.out.println();
         }
     }
-
     public static void main(String[] args) {
         CircularLinkedlist circularLinkedlist = new CircularLinkedlist();
 
@@ -131,8 +129,9 @@ public class CircularLinkedlist {
             System.out.println("2.insertion at end");
             System.out.println("3. insertion at specific position");
             System.out.println("4. Deletion at beginning");
-            System.out.println("4.display");
-            System.out.println("5.exit");
+            System.out.println("5.display");
+            System.out.println("6.split");
+            System.out.println("7. exit");
             System.out.print("Enter your choice: ");
             choice = sc.nextInt();
 
@@ -153,7 +152,10 @@ public class CircularLinkedlist {
                     circularLinkedlist.display();
                     break;
                 case 6:
-                    System.exit(0);
+//                    circularLinkedlist.split();
+                    break;
+                case 7:
+                   System.exit(0);
                     break;
                 default:
                     System.out.println("Enter the correct choice");
