@@ -73,22 +73,66 @@ public class SwapInPairs {
 
     }
 
+
+
+    // reverse the linked list in every k nodes of a linked list
+    public node Reversek(node head, int k){
+        if(head == null){
+            return null;
+        }
+        node current = head;
+        node next= null;
+        node prev = null;
+        int count=0;
+
+        while(count < k && current != null){
+            next = current.next;
+            current.next = prev;
+            prev = current;
+            current = next;
+            count++;
+        }
+        if(next != null)
+            head.next = Reversek(next,k);
+
+        return prev;
+    }
+
+
+    // to display the data
+    public void display(node head){
+        if (head== null){
+            System.out.println("empty");
+        }
+
+        node temp = head;
+        while (temp!=null){
+            System.out.println(temp.data);
+            temp= temp.next;
+        }
+    }
     public static void main(String[] args) {
         node head= new node(1);
         node first = new node(2);
         node second = new node(3);
         node third = new node(4);
         node fourth = new node(5);
+        node fifth = new node(6);
 
         head.next = first;
         first.next = second;
         second.next = third;
         third.next = fourth;
 
-        fourth.next=null;
+        fourth.next=fifth;
+        fifth.next= null;
 
         SwapInPairs sp = new SwapInPairs();
-         sp.swap(head);
+//         sp.swap(head);
+
+    node temp = sp.Reversek(head , 3);
+    sp.display(temp);
+
 
     }
 }
