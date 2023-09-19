@@ -1,4 +1,4 @@
-package GFGProbkems;
+package GFGProblems;
 
 
 public class nextplaindrome
@@ -6,7 +6,7 @@ public class nextplaindrome
     // Returns next palindrome of a given
     // number num[]. This function is for
     // input type 2 and 3
-    static void generateNextPalindromeUtil(int num[], int n)
+    static void generateNextPalindromeUtil(int[] num, int n)
     {
         int mid = n / 2;
 
@@ -80,7 +80,7 @@ public class nextplaindrome
 
     // The function that prints next palindrome
     // of a given number num[] with n digits.
-    static void generateNextPalindrome(int num[], int n)
+    static void generateNextPalindrome(int[] num, int n)
     {
         System.out.println("Next Palindrome is:");
 
@@ -103,7 +103,7 @@ public class nextplaindrome
     }
 
     // A utility function to check if num has all 9s
-    static boolean isAll9(int num[], int n) {
+    static boolean isAll9(int[] num, int n) {
         for (int i = 0; i < n; i++)
             if (num[i] != 9)
                 return false;
@@ -111,15 +111,14 @@ public class nextplaindrome
     }
 
     /* Utility that prints out an array on a line */
-    static void printarray(int num[]) {
-        for (int i = 0; i < num.length; i++)
-            System.out.print(num[i]);
+    static void printarray(int[] num) {
+        for (int j : num) System.out.print(j);
         System.out.println();
     }
 
     public static void main(String[] args)
     {
-        int num[] = { 9, 4, 1, 8, 7, 9, 7, 8, 3, 2, 2 };
+        int[] num = { 9, 4, 1, 8, 7, 9, 7, 8, 3, 2, 2 };
         generateNextPalindrome(num, num.length);
     }
 }

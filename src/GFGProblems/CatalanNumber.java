@@ -1,4 +1,4 @@
-package GFGProbkems;
+package GFGProblems;
 
 import java.math.BigInteger;
 
